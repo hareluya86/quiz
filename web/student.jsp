@@ -22,30 +22,6 @@
             while(unansweredQuestions.next()){
                 numUnanswereQuestions++;
             }
-            /*ResultSet resultset1 = statement.executeQuery("select count(*) as questions from tbl_question");
-            resultset1.next();
-            int count=resultset1.getInt("questions");
-            int id =0; //question id?
-            id=rn.nextInt(count)+1;
-            ResultSet resultset3 = statement.executeQuery("select count(*) as answer_questions from student_question where student='"+session.getAttribute("student")+"'");
-            int answer_q=0;
-            if(resultset3.next())
-            {
-                answer_q=resultset3.getInt("answer_questions");
-            }
-            if(count>answer_q) //if total available questions are more than the questions that the student has answered.
-            {
-                //get all questions that the student has answered
-                ResultSet resultset2 = statement.executeQuery("select * from student_question where question='"+id+"' and student='"+session.getAttribute("student")+"'");
-                List<Integer> answeredQuestions = new ArrayList<Integer>();
-                while(resultset2.next())
-                {
-                    //id=rn.nextInt(count)+1;
-                    //resultset2 = statement.executeQuery("select * from student_question where question='"+id+"' and student='"+session.getAttribute("student")+"'");
-                }
-                ResultSet resultset = statement.executeQuery("select * from tbl_question limit "+(id-1)+","+(id-1)+"");
-                if(resultset.next()) {
-            */
             if(numUnanswereQuestions >0){
                 //get a random question
                 int randomQuestionIndex = (int)Math.ceil(Math.random()*numUnanswereQuestions);
